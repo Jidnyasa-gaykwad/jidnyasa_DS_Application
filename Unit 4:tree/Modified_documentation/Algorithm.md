@@ -1,31 +1,24 @@
-**Algorithm: Advanced Bus Route Management System Using Multiple Trees**
-
-**Step 1:** Start the program and initialize the predefined bus route records.
-
-**Step 2:** Create the BST, AVL Tree, and Threaded BST using the available bus routes.
-
-**Step 3:** Display the main menu containing route insertion, searching, deletion, traversals, minimum and maximum route identification, and tree information.
-
-**Step 4:** Accept the user's choice.
-
-**Step 5:** If adding a route is selected, display the predefined route menu, accept the selected route, and update the active route records.
-
-**Step 6:** If searching is selected, search for the required route number in the BST and display its details if found.
-
-**Step 7:** If deleting is selected, remove the selected route from the active records.
-
-**Step 8:** After insertion or deletion, rebuild the BST, AVL Tree, and Threaded BST using the updated route records.
-
-**Step 9:** Perform the selected traversal:
-- Inorder: Left → Root → Right.
-- Preorder: Root → Left → Right.
-- Postorder: Left → Right → Root.
-- Threaded inorder: Follow inorder-successor threads.
-
-**Step 10:** If minimum or maximum is selected, find the smallest or largest route number in the BST.
-
-**Step 11:** If AVL operations are selected, display AVL traversal, height, balance factor, and apply LL, RR, LR, or RL rotations during insertion when required.
-
-**Step 12:** Display tree information when requested and repeat the menu until Exit is selected.
-
-**Step 13:** Stop the program.
+1. Start.
+2. Initialize an empty Binary Search Tree (BST).
+3. Display the menu:
+- Insert Employee ID
+- Search Employee ID
+- Delete Employee ID
+- Display Employee IDs
+- AVL Rotation Demonstration
+- Exit
+4. Accept the user's choice.
+5. Insertion: Insert the employee ID into the BST according to BST rules.
+6. Searching: Search for the given employee ID and display whether it is found.
+7. Deletion: Delete the specified employee ID from the BST while maintaining BST properties.
+8. Display: Perform inorder traversal to display employee IDs in sorted order.
+9. AVL Rotation Demonstration:
+- Allow the user to select LL, RR, LR, or RL rotation.
+- Insert suitable values to demonstrate the selected case.
+- Calculate and display the balance factor of each relevant node.
+- Perform the required rotation.
+- Store the inorder traversal before rotation.
+- Perform inorder traversal after rotation and compare both results.
+- Display whether the inorder traversal remains unchanged.
+10. Repeat Steps 3–9 until the user selects Exit.
+11. Stop.
