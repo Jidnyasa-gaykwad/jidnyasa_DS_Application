@@ -1,1 +1,69 @@
+1. Main Menu
 
+===== FOOD ORDER MANAGEMENT SYSTEM =====
+1. Add Food Order
+2. Display All Orders
+3. Search Order
+4. Delete Order
+5. Calculate Total Bill
+6. Exit
+
+Enter your choice: 1
+
+2. Add Food Order
+
+Enter Food Name: Pizza
+Enter Quantity: 2
+Enter Price per Item: 150
+
+Order Added Successfully!
+
+3. Add Another Order
+
+Enter Food Name: Burger
+Enter Quantity: 3
+Enter Price per Item: 80
+
+Order Added Successfully!
+
+4. Display All Orders
+
+===== ALL FOOD ORDERS =====
+
+Food Name: Pizza
+Quantity: 2
+Amount: Rs. 300
+
+Food Name: Burger
+Quantity: 3
+Amount: Rs. 240
+
+5. Search Order
+
+Enter Food Name to Search: Pizza
+
+Order Found Successfully!
+
+Food Name: Pizza
+Quantity: 2
+Amount: Rs. 300
+
+6. Delete Order
+
+Enter Food Name to Delete: Burger
+
+Order Deleted Successfully!
+
+7. Calculate Total Bill
+
+===== TOTAL BILL =====
+
+Food Name: Pizza
+Quantity: 2
+Amount: Rs. 300
+
+Total Bill = Rs. 300
+
+8. Exit
+
+Thank you for using the Food Order Management System!
