@@ -1,1 +1,8 @@
-
+To design and implement a Food Order Management System using a Linked List in C++ that helps manage food 
+orders in restaurants and college canteens in an organized and efficient manner.The system aims to overcome the difficulties 
+associated with manual order management, such as maintaining order records, searching for orders, deleting cancelled orders,
+and calculating the total bill. It allows users to add new food orders, display all order details, search for a particular order,
+delete an existing order, and calculate the total amount of orders. The linked list data structure is used to store order information 
+dynamically, allowing nodes to be created and deleted according to requirements. This project focuses on implementing fundamental linked 
+list operations such as insertion, deletion, searching, and traversal while understanding the use of pointers and dynamic memory allocation in C++. 
+The system provides a basic approach to managing food orders and demonstrates the practical application of data structures in solving real-world problems.
