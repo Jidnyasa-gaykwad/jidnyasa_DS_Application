@@ -1,6 +1,9 @@
 Step 1: Start.
+
 Step 2: Initialize the linked list with head = NULL.
+
 Step 3: Display the main menu: Add Order, Display Orders, Search Order, Delete Order, Calculate Bill, and Exit.
+
 Step 4: Accept the user's choice.
 Step 5: If choice is 1, accept order details and insert a new node into the linked list.
 Step 6: If choice is 2, traverse the linked list and display all orders.
