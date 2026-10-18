@@ -1,2 +1,1 @@
-
-To design and implement an Employee ID Management System using a Binary Search Tree (BST) in C++ to efficiently insert, search, and delete employee identification numbers while maintaining records in an organized manner.
+To implement and design a C++ program to demonstrate LL, RR, LR, and RL rotations in an AVL tree using suitable insertion sequences and display the tree before and after each rotation to maintain the balance of the tree.
