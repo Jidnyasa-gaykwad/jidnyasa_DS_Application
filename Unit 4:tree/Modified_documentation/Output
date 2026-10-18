@@ -1,78 +1,138 @@
-1. Employee ID Management Menu
+# Output – AVL Rotation Demonstration
 
-
-=== Employee ID Management ===
-1. Insert Employee ID
-2. Search Employee ID
-3. Delete Employee ID
-4. Display Sorted Employee IDs
-5. AVL Rotation Demonstration
-6. Exit
-Enter your choice: 1
-
-
-2. Insert Employee IDs
-
-
-Enter your choice: 1
-Enter Employee ID: 20
-
-Enter your choice: 1
-Enter Employee ID: 10
-
- 3. Display Sorted Employee IDs
-
-Enter your choice: 4
-Employee IDs in sorted order: 10 20 30
-
-
- 4. Search Employee ID
-
-
-Enter your choice: 2
-Enter Employee ID to search: 20
-Employee ID found.
-
-
- 5. Delete Employee ID
-
-
-Enter your choice: 3
-Enter Employee ID to delete: 20
-Employee ID deleted.
-
-
-6. AVL Rotation Demonstration (LL Case)
-
-
-Enter your choice: 5
-
---- AVL Rotation Cases ---
-1. LL Rotation
-2. RR Rotation
-3. LR Rotation
-4. RL Rotation
-Select rotation case: 1
-
-Tree values inserted: 30 20 10
-Root ID: 30
-Root balance factor: 2
-Left child balance factor: 1
-Inorder before rotation: 10 20 30
-Applying Right Rotation (LL).
-New root ID: 20
-Inorder after rotation: 10 20 30
-Verification successful: Inorder unchanged.
-New root balance factor: 0
-
-
- 7. Exit Program
+## Main Menu
 
 ```text
-Enter your choice: 6
-Exiting program.
+===== AVL ROTATION DEMONSTRATION =====
+1. LL Rotation (30, 20, 10)
+2. RR Rotation (10, 20, 30)
+3. LR Rotation (30, 10, 20)
+4. RL Rotation (10, 30, 20)
+5. Exit
+
+Enter your choice: 1
+```
+
+## LL Rotation (Left-Left)
+
+```text
+Tree before rotation:
+
+        30(BF=2)
+       /
+   20(BF=1)
+   /
+10(BF=0)
+
+LL case detected.
+Balance Factor of node 30 = +2
+
+Performing Right Rotation...
+
+Tree after rotation:
+
+       20(BF=0)
+      /        \
+ 10(BF=0)    30(BF=0)
+
+Final Inorder Traversal: 10 20 30
+Inorder Verification: PASSED
+```
+
+## RR Rotation (Right-Right)
+
+```text
+Enter your choice: 2
+
+Tree before rotation:
+
+10(BF=-2)
+        \
+       20(BF=-1)
+              \
+             30(BF=0)
+
+RR case detected.
+Balance Factor of node 10 = -2
+
+Performing Left Rotation...
+
+Tree after rotation:
+
+       20(BF=0)
+      /        \
+ 10(BF=0)    30(BF=0)
+
+Final Inorder Traversal: 10 20 30
+Inorder Verification: PASSED
+```
+
+## LR Rotation (Left-Right)
+
+```text
+Enter your choice: 3
+
+Tree before rotation:
+
+        30(BF=2)
+       /
+   10(BF=-1)
+         \
+         20(BF=0)
+
+LR case detected.
+Balance Factor of node 30 = +2
+
+Performing Left Rotation on left child,
+then Right Rotation on root...
+
+Tree after rotation:
+
+       20(BF=0)
+      /        \
+ 10(BF=0)    30(BF=0)
+
+Final Inorder Traversal: 10 20 30
+Inorder Verification: PASSED
+```
+
+## RL Rotation (Right-Left)
+
+```text
+Enter your choice: 4
+
+Tree before rotation:
+
+10(BF=-2)
+        \
+       30(BF=1)
+       /
+   20(BF=0)
+
+RL case detected.
+Balance Factor of node 10 = -2
+
+Performing Right Rotation on right child,
+then Left Rotation on root...
+
+Tree after rotation:
+
+       20(BF=0)
+      /        \
+ 10(BF=0)    30(BF=0)
+
+Final Inorder Traversal: 10 20 30
+Inorder Verification: PASSED
+```
+
+## Exit
+
+```text
+Enter your choice: 5
+
+Program ended.
 ```
 
 ## Result
 
-The program successfully performs employee ID insertion, searching, deletion, and sorted display using a Binary Search Tree. It also demonstrates LL, RR, LR, and RL AVL rotations, displays balance factors, and verifies that inorder traversal remains unchanged after rotation.
+The program demonstrates all four AVL tree rotations: LL, RR, LR, and RL. It displays the balance factor, shows the tree before and after rotation, and verifies that the inorder traversal remains unchanged. This demonstrates how AVL rotations restore tree balance while preserving the Binary Search Tree property.
