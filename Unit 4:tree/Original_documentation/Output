@@ -1,23 +1,123 @@
-1. Insert Employee ID
-2. Search Employee ID
-3. Delete Employee ID
-4. Display Employee IDs
+
+
+## 1. LL Rotation
+
+**Insertion sequence:** 30, 20, 10
+
+
+===== AVL ROTATION DEMONSTRATION =====
+1. LL Rotation (30, 20, 10)
+2. RR Rotation (10, 20, 30)
+3. LR Rotation (30, 10, 20)
+4. RL Rotation (10, 30, 20)
 5. Exit
-Enter choice: 1
-Enter Employee ID: 105
-ID inserted successfully.
+Enter your choice: 1
 
-Enter choice: 1
-Enter Employee ID: 102
-ID inserted successfully.
+LL Rotation required at node 30
+Before Rotation:
 
-Enter choice: 4
-Employee IDs: 102 105
+     30
+20
+     10
 
-Enter choice: 2
-Enter ID to search: 105
-Employee ID found.
+After LL Rotation:
 
-Enter choice: 3
-Enter ID to delete: 102
-ID deleted successfully.
+     30
+20
+     10
+
+Final Balanced AVL Tree:
+
+     30
+20
+     10
+```
+
+## 2. RR Rotation
+
+**Insertion sequence:** 10, 20, 30
+
+```text
+Enter your choice: 2
+
+RR Rotation required at node 10
+Before Rotation:
+
+     30
+20
+     10
+
+After RR Rotation:
+
+     30
+20
+     10
+
+Final Balanced AVL Tree:
+
+     30
+20
+     10
+```
+
+## 3. LR Rotation
+
+**Insertion sequence:** 30, 10, 20
+
+
+Enter your choice: 3
+
+LR Rotation required at node 30
+Before Rotation:
+
+     30
+20
+     10
+
+After LR Rotation:
+
+     30
+20
+     10
+
+Final Balanced AVL Tree:
+
+     30
+20
+     10
+```
+
+## 4. RL Rotation
+
+**Insertion sequence:** 10, 30, 20
+
+
+Enter your choice: 4
+
+RL Rotation required at node 10
+Before Rotation:
+
+     30
+20
+     10
+
+After RL Rotation:
+
+     30
+20
+     10
+
+Final Balanced AVL Tree:
+
+     30
+20
+     10
+```
+
+5. Exit
+
+
+Enter your choice: 5
+Program ended.
+
+
