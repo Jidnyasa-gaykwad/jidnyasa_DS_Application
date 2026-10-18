@@ -126,6 +126,3 @@ No.     Food Name       Price
 Enter your choice: 8
 Thank you!
 
-The Food Order Management System was implemented successfully using a Doubly Linked List in C++. The program supports adding food orders, displaying orders in forward and reverse order, searching and cancelling orders, displaying the predefined food menu, and calculating the total bill.
-
-
