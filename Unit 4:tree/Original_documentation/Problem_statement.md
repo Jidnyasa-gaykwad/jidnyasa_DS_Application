@@ -1,3 +1,2 @@
-## Problem Statement
 
-To design and implement a **Bus Route Management System using a Binary Search Tree (BST)** in C++ to manage bus route information efficiently. The system aims to store and organize bus route details such as route number, bus name, source, and destination. It provides operations such as insertion of new bus routes, searching for a specific route, deletion of existing routes, and displaying routes in ascending order using inorder traversal. The system also identifies the minimum and maximum route numbers. This project demonstrates the practical application of tree data structures for systematic record management and efficient information retrieval.
+To design and implement an Employee ID Management System using a Binary Search Tree (BST) in C++ to efficiently insert, search, and delete employee identification numbers while maintaining records in an organized manner.
