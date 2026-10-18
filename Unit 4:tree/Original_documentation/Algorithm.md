@@ -27,8 +27,8 @@ Step 5: Perform the selected operation:
 
 
 
-Repeat the menu until the user selects Exit.
+Step 6: Repeat the menu until the user selects Exit.
 
 
 
-Stop the program.
+Step 7: Stop.
