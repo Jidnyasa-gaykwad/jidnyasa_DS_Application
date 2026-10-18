@@ -1,1 +1,133 @@
+1. Main menu output
+===== BUS ROUTE MANAGEMENT =====
+1. Add Predefined Bus Route
+2. Search Bus Route
+3. Display Routes in Sorted Order
+4. Preorder Traversal
+5. Inorder Traversal
+6. Postorder Traversal
+7. Delete Bus Route
+8. Find Minimum Route Number
+9. Find Maximum Route Number
+10. Display Binary Tree Information
+11. Threaded BST Inorder Traversal
+12. Display AVL Tree Traversal
+13. Display AVL Height and Balance
+14. Exit
+Enter your choice: 
 
+2. Option 1 — Add predefined bus route
+Enter your choice: 1
+
+===== AVAILABLE BUS ROUTES =====
+101 - Shivneri - Pune to Mumbai
+102 - Express - Nashik to Pune
+103 - Citybus - Mumbai to Nashik
+104 - Deccan - Pune to Nashik
+105 - MSRTC - Ahmednagar to Pune
+
+Enter route number to add (0 to cancel): 101
+
+Bus route added successfully!
+
+Add routes 102, 103, and 104 in the same way to test the other features.
+3. Option 3 — Display routes in sorted order
+After adding routes 101, 102, 103 and 104:
+Enter your choice: 3
+
+===== ROUTES IN SORTED ORDER =====
+
+Route Number : 101
+Bus Name     : Shivneri
+Source       : Pune
+Destination  : Mumbai
+-----------------------------
+
+Route Number : 102
+Bus Name     : Express
+Source       : Nashik
+Destination  : Pune
+-----------------------------
+
+Route Number : 103
+Bus Name     : Citybus
+Source       : Mumbai
+Destination  : Nashik
+-----------------------------
+
+Route Number : 104
+Bus Name     : Deccan
+Source       : Pune
+Destination  : Nashik
+-----------------------------
+
+4. Option 10 — Display binary tree information
+Enter your choice: 10
+
+===== BINARY TREE INFORMATION =====
+Root Route Number : 101
+Total Nodes       : 4
+Leaf Nodes        : 1
+Tree Height       : 4
+Root Balance Factor: -3
+Left Child        : NULL
+Right Child       : 102
+
+
+5. Option 11 — Threaded BST traversal
+Enter your choice: 11
+
+===== THREADED BST INORDER =====
+
+Route Number : 101
+Bus Name     : Shivneri
+Source       : Pune
+Destination  : Mumbai
+-----------------------------
+
+Route Number : 102
+Bus Name     : Express
+Source       : Nashik
+Destination  : Pune
+-----------------------------
+
+Route Number : 103
+Bus Name     : Citybus
+Source       : Mumbai
+Destination  : Nashik
+-----------------------------
+
+Route Number : 104
+Bus Name     : Deccan
+Source       : Pune
+Destination  : Nashik
+-----------------------------
+
+6. Option 12 — AVL tree traversal
+Enter your choice: 12
+
+===== AVL TREE INORDER =====
+
+Route Number : 101
+Bus Name     : Shivneri
+Source       : Pune
+Destination  : Mumbai
+-----------------------------
+
+Route Number : 102
+Bus Name     : Express
+Source       : Nashik
+Destination  : Pune
+-----------------------------
+
+Route Number : 103
+Bus Name     : Citybus
+Source       : Mumbai
+Destination  : Nashik
+-----------------------------
+
+Route Number : 104
+Bus Name     : Deccan
+Source       : Pune
+Destination  : Nashik
+-----------------------------
