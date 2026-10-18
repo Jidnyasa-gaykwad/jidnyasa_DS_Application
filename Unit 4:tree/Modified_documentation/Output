@@ -1,8 +1,6 @@
+1. Employee ID Management Menu
 
 
-### 1. Employee ID Management Menu
-
-```text
 === Employee ID Management ===
 1. Insert Employee ID
 2. Search Employee ID
@@ -11,45 +9,42 @@
 5. AVL Rotation Demonstration
 6. Exit
 Enter your choice: 1
-Enter Employee ID: 30
-```
 
-### 2. Insert Employee IDs
 
-```text
+2. Insert Employee IDs
+
+
 Enter your choice: 1
 Enter Employee ID: 20
 
 Enter your choice: 1
 Enter Employee ID: 10
-```
 
-### 3. Display Sorted Employee IDs
+ 3. Display Sorted Employee IDs
 
-```text
 Enter your choice: 4
 Employee IDs in sorted order: 10 20 30
-```
 
-### 4. Search Employee ID
 
-```text
+ 4. Search Employee ID
+
+
 Enter your choice: 2
 Enter Employee ID to search: 20
 Employee ID found.
-```
 
-### 5. Delete Employee ID
 
-```text
+ 5. Delete Employee ID
+
+
 Enter your choice: 3
 Enter Employee ID to delete: 20
 Employee ID deleted.
-```
 
-### 6. AVL Rotation Demonstration (LL Case)
 
-```text
+6. AVL Rotation Demonstration (LL Case)
+
+
 Enter your choice: 5
 
 --- AVL Rotation Cases ---
@@ -69,9 +64,9 @@ New root ID: 20
 Inorder after rotation: 10 20 30
 Verification successful: Inorder unchanged.
 New root balance factor: 0
-```
 
-### 7. Exit Program
+
+ 7. Exit Program
 
 ```text
 Enter your choice: 6
