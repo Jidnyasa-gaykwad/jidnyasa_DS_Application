@@ -2,7 +2,6 @@
 
 ## Main Menu
 
-```text
 ===== AVL ROTATION DEMONSTRATION =====
 1. LL Rotation (30, 20, 10)
 2. RR Rotation (10, 20, 30)
@@ -15,7 +14,7 @@ Enter your choice: 1
 
 ## LL Rotation (Left-Left)
 
-```text
+
 Tree before rotation:
 
         30(BF=2)
@@ -37,11 +36,11 @@ Tree after rotation:
 
 Final Inorder Traversal: 10 20 30
 Inorder Verification: PASSED
-```
+
 
 ## RR Rotation (Right-Right)
 
-```text
+
 Enter your choice: 2
 
 Tree before rotation:
@@ -69,7 +68,7 @@ Inorder Verification: PASSED
 
 ## LR Rotation (Left-Right)
 
-```text
+
 Enter your choice: 3
 
 Tree before rotation:
@@ -98,7 +97,6 @@ Inorder Verification: PASSED
 
 ## RL Rotation (Right-Left)
 
-```text
 Enter your choice: 4
 
 Tree before rotation:
@@ -127,12 +125,8 @@ Inorder Verification: PASSED
 
 ## Exit
 
-```text
 Enter your choice: 5
 
 Program ended.
 ```
 
-## Result
-
-The program demonstrates all four AVL tree rotations: LL, RR, LR, and RL. It displays the balance factor, shows the tree before and after rotation, and verifies that the inorder traversal remains unchanged. This demonstrates how AVL rotations restore tree balance while preserving the Binary Search Tree property.
