@@ -1,1 +1,131 @@
+# Output — Food Order Management System
+
+1. Main Menu
+
+text
+================================
+ FOOD ORDER MANAGEMENT SYSTEM
+================================
+1. Add Food Order
+2. Display All Orders
+3. Display Orders in Reverse
+4. Search Order
+5. Cancel Order
+6. Calculate Total Bill
+7. Display Food Menu
+8. Exit
+================================
+Enter your choice: 1
+
+ 2. Display Food Menu and Place Order
+
+text
+========== FOOD MENU ==========
+No.     Food Name       Price
+--------------------------------
+1       Pizza           Rs. 150
+2       Burger          Rs. 80
+3       Sandwich        Rs. 60
+4       French Fries    Rs. 70
+5       Dosa            Rs. 50
+6       Cold Coffee     Rs. 90
+================================
+Select food number (1-6): 1
+Enter quantity: 2
+
+Order added successfully!
+Order ID: 1
+Food: Pizza
+Price: Rs. 150
+Quantity: 2
+Total Amount: Rs. 300
+
+
+3. Add Another Food Order
+
+
+Enter your choice: 1
+
+========== FOOD MENU ==========
+No.     Food Name       Price
+--------------------------------
+1       Pizza           Rs. 150
+2       Burger          Rs. 80
+3       Sandwich        Rs. 60
+4       French Fries    Rs. 70
+5       Dosa            Rs. 50
+6       Cold Coffee     Rs. 90
+================================
+Select food number (1-6): 2
+Enter quantity: 3
+
+Order added successfully!
+Order ID: 2
+Food: Burger
+Price: Rs. 80
+Quantity: 3
+Total Amount: Rs. 240
+
+
+4. Display All Orders
+
+text
+Enter your choice: 2
+
+========== ALL ORDERS ==========
+Order ID: 1 | Food: Pizza | Quantity: 2 | Amount: Rs. 300
+Order ID: 2 | Food: Burger | Quantity: 3 | Amount: Rs. 240
+Total Bill: Rs. 540
+
+
+5. Display Orders in Reverse
+
+```text
+Enter your choice: 3
+
+======= REVERSE ORDER LIST =======
+Order ID: 2 | Food: Burger | Quantity: 3 | Amount: Rs. 240
+Order ID: 1 | Food: Pizza | Quantity: 2 | Amount: Rs. 300
+```
+
+6. Search Order
+
+```text
+Enter your choice: 4
+Enter Order ID to search: 1
+Order found: Pizza, Quantity: 2, Amount: Rs. 300
+```
+
+7. Cancel Order
+
+Enter your choice: 5
+Enter Order ID to cancel: 2
+Order cancelled successfully!
+
+8. Calculate Total Bill
+
+Enter your choice: 6
+Total Bill: Rs. 300
+
+9. Display Food Menu
+
+Enter your choice: 7
+
+========== FOOD MENU ==========
+No.     Food Name       Price
+--------------------------------
+1       Pizza           Rs. 150
+2       Burger          Rs. 80
+3       Sandwich        Rs. 60
+4       French Fries    Rs. 70
+5       Dosa            Rs. 50
+6       Cold Coffee     Rs. 90
+================================
+10. Exit
+
+Enter your choice: 8
+Thank you!
+
+The Food Order Management System was implemented successfully using a Doubly Linked List in C++. The program supports adding food orders, displaying orders in forward and reverse order, searching and cancelling orders, displaying the predefined food menu, and calculating the total bill.
+
 
