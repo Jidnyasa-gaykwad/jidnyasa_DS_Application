@@ -1,29 +1,34 @@
-**Algorithm: Bus Route Management System Using Binary Search Tree**
+Start the program.
 
-**Step 1:** Start the program.
 
-**Step 2:** Create a Binary Search Tree node containing route number, bus name, source, destination, and left and right pointers.
 
-**Step 3:** Display the main menu with the following operations:
-- Insert a bus route.
-- Search for a bus route.
-- Delete a bus route.
-- Display routes in sorted order.
-- Find minimum and maximum route numbers.
-- Exit.
+Create a Binary Search Tree (BST) node to store the employee ID, left pointer, and right pointer.
 
-**Step 4:** Accept the user's choice.
 
-**Step 5:** If insertion is selected, create a new node and insert it according to the BST property.
 
-**Step 6:** If searching is selected, compare the required route number with the current node and search the left or right subtree.
+Display a menu with the following operations:
+- Insert Employee ID
+- Search Employee ID
+- Delete Employee ID
+- Display Employee IDs
+- Exit
 
-**Step 7:** If deletion is selected, locate the route and delete the node according to the number of children it has.
 
-**Step 8:** If display is selected, perform inorder traversal to display routes in ascending order.
 
-**Step 9:** If minimum or maximum is selected, find the leftmost or rightmost node, respectively.
+Read the user's choice.
 
-**Step 10:** Repeat the menu until the user selects Exit.
 
-**Step 11:** Stop the program.
+
+Perform the selected operation:
+- Insertion: Insert the employee ID at the appropriate position according to BST properties.
+- Searching: Compare the ID with the current node and search the left or right subtree.
+- Deletion: Find the employee ID and delete the node while maintaining BST properties.
+- Display: Traverse the BST using inorder traversal to display IDs in ascending order.
+
+
+
+Repeat the menu until the user selects Exit.
+
+
+
+Stop the program.
