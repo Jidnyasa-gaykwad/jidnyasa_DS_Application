@@ -1,1 +1,78 @@
+1. Main Menu
 
+====================================
+   BUS ROUTE MANAGEMENT SYSTEM
+       Using Binary Search Tree
+====================================
+1. Add Bus Route
+2. Search Bus Route
+3. Delete Bus Route
+4. Display Routes in Sorted Order
+5. Find Minimum Route Number
+6. Find Maximum Route Number
+7. Exit
+====================================
+Enter your choice:
+
+2. Add Bus Route
+
+======= AVAILABLE BUS ROUTES =======
+1. Route No: 101 | Shivneri | Pune to Mumbai
+2. Route No: 102 | Express | Nashik to Pune
+3. Route No: 103 | Citybus | Mumbai to Nashik
+4. Route No: 104 | Deccan | Pune to Nashik
+5. Route No: 105 | MSRTC | Ahmednagar to Pune
+
+Select a bus route (1-5): 1
+
+Bus route added successfully!
+
+Route Number : 101
+Bus Name     : Shivneri
+Source       : Pune
+Destination  : Mumbai
+
+3. Display Routes in Sorted Order
+
+======= BUS ROUTES IN SORTED ORDER =======
+
+Route Number : 101
+Bus Name     : Shivneri
+Source       : Pune
+Destination  : Mumbai
+-------------------------
+
+Route Number : 102
+Bus Name     : Express
+Source       : Nashik
+Destination  : Pune
+-------------------------
+
+4. Search Bus Route
+
+Enter your choice: 2
+Enter route number to search: 101
+
+Bus route found!
+
+Route Number : 101
+Bus Name     : Shivneri
+Source       : Pune
+Destination  : Mumbai
+
+5. Delete Bus Route
+
+Enter your choice: 3
+Enter route number to delete: 101
+
+Bus route deleted successfully!
+
+6. Find Minimum and Maximum Route Numbers
+
+Minimum Route Number:
+Route Number : 101
+Bus Name     : Shivneri
+
+Maximum Route Number:
+Route Number : 102
+Bus Name     : Express
