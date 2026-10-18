@@ -1,12 +1,12 @@
-Start the program.
+Step 1: Start 
 
 
 
-Create a Binary Search Tree (BST) node to store the employee ID, left pointer, and right pointer.
+Step 2: Create a Binary Search Tree (BST) node to store the employee ID, left pointer, and right pointer.
 
 
 
-Display a menu with the following operations:
+Step 3: Display a menu with the following operations:
 - Insert Employee ID
 - Search Employee ID
 - Delete Employee ID
@@ -15,11 +15,11 @@ Display a menu with the following operations:
 
 
 
-Read the user's choice.
+Step 4: Read the user's choice.
 
 
 
-Perform the selected operation:
+Step 5: Perform the selected operation:
 - Insertion: Insert the employee ID at the appropriate position according to BST properties.
 - Searching: Compare the ID with the current node and search the left or right subtree.
 - Deletion: Find the employee ID and delete the node while maintaining BST properties.
