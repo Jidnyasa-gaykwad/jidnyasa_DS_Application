@@ -1,1 +1,341 @@
 
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <string>
+using namespace std;
+
+class CampusGraph {
+    int V;
+    vector<string> building;
+    vector<vector<int> > adj;
+
+public:
+    CampusGraph(int n) {
+        V = n;
+        building.resize(n);
+        adj.resize(n);
+    }
+
+    void setBuilding(int i, string name) {
+        building[i] = name;
+    }
+
+    void addBuilding(string name) {
+        building.push_back(name);
+        adj.push_back(vector<int>());
+        V++;
+        cout << "Building added successfully!\n";
+    }
+
+    void addPathway(int u, int v) {
+        if (u < 0 || u >= V || v < 0 || v >= V || u == v) {
+            cout << "Invalid pathway!\n";
+            return;
+        }
+
+        for (int i = 0; i < adj[u].size(); i++) {
+            if (adj[u][i] == v) {
+                cout << "Pathway already exists!\n";
+                return;
+            }
+        }
+
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+        cout << "Pathway added successfully!\n";
+    }
+
+    void displayGraph() {
+        cout << "\n--- Campus Graph ---\n";
+
+        for (int i = 0; i < V; i++) {
+            cout << i << " (" << building[i] << ") -> ";
+
+            for (int j = 0; j < adj[i].size(); j++)
+                cout << building[adj[i][j]] << " ";
+
+            cout << endl;
+        }
+    }
+
+    int BFS(int start, bool show = true) {
+        if (start < 0 || start >= V) {
+            cout << "Invalid starting building!\n";
+            return 0;
+        }
+
+        vector<bool> visited(V, false);
+        queue<int> q;
+        int count = 0;
+
+        visited[start] = true;
+        q.push(start);
+
+        if (show)
+            cout << "BFS: ";
+
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
+            count++;
+
+            if (show)
+                cout << building[u] << " ";
+
+            for (int i = 0; i < adj[u].size(); i++) {
+                int v = adj[u][i];
+
+                if (!visited[v]) {
+                    visited[v] = true;
+                    q.push(v);
+                }
+            }
+        }
+
+        if (show)
+            cout << "\nBuildings reached: " << count
+                 << " out of " << V << endl;
+
+        return count;
+    }
+
+    int DFSUtil(int u, vector<bool>& visited, bool show) {
+        visited[u] = true;
+        int count = 1;
+
+        if (show)
+            cout << building[u] << " ";
+
+        for (int i = 0; i < adj[u].size(); i++) {
+            int v = adj[u][i];
+
+            if (!visited[v])
+                count += DFSUtil(v, visited, show);
+        }
+
+        return count;
+    }
+
+    int DFS(int start, bool show = true) {
+        if (start < 0 || start >= V) {
+            cout << "Invalid starting building!\n";
+            return 0;
+        }
+
+        vector<bool> visited(V, false);
+
+        if (show)
+            cout << "DFS: ";
+
+        int count = DFSUtil(start, visited, show);
+
+        if (show)
+            cout << "\nBuildings reached: " << count
+                 << " out of " << V << endl;
+
+        return count;
+    }
+
+    void showDisconnected(int start) {
+        if (start < 0 || start >= V) {
+            cout << "Invalid starting building!\n";
+            return;
+        }
+
+        vector<bool> visited(V, false);
+        queue<int> q;
+
+        visited[start] = true;
+        q.push(start);
+
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
+
+            for (int i = 0; i < adj[u].size(); i++) {
+                int v = adj[u][i];
+
+                if (!visited[v]) {
+                    visited[v] = true;
+                    q.push(v);
+                }
+            }
+        }
+
+        bool found = false;
+        cout << "Buildings unreachable from "
+             << building[start] << ": ";
+
+        for (int i = 0; i < V; i++) {
+            if (!visited[i]) {
+                cout << building[i] << " ";
+                found = true;
+            }
+        }
+
+        if (!found)
+            cout << "None (all buildings are reachable)";
+
+        cout << endl;
+    }
+
+    void showIsolated() {
+        bool found = false;
+        cout << "Isolated buildings: ";
+
+        for (int i = 0; i < V; i++) {
+            if (adj[i].empty()) {
+                cout << building[i] << " ";
+                found = true;
+            }
+        }
+
+        if (!found)
+            cout << "None";
+
+        cout << endl;
+    }
+
+    bool hasPath(int start, int end) {
+        if (start < 0 || start >= V ||
+            end < 0 || end >= V)
+            return false;
+
+        vector<bool> visited(V, false);
+        queue<int> q;
+
+        visited[start] = true;
+        q.push(start);
+
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
+
+            if (u == end)
+                return true;
+
+            for (int i = 0; i < adj[u].size(); i++) {
+                int v = adj[u][i];
+
+                if (!visited[v]) {
+                    visited[v] = true;
+                    q.push(v);
+                }
+            }
+        }
+
+        return false;
+    }
+
+    int size() {
+        return V;
+    }
+
+    string getBuilding(int i) {
+        return building[i];
+    }
+};
+
+int main() {
+    int n, e, u, v, start;
+    string name;
+
+    cout << "Enter number of buildings (max 100): ";
+    cin >> n;
+
+    if (n < 1 || n > 100) {
+        cout << "Invalid number of buildings!\n";
+        return 0;
+    }
+
+    CampusGraph campus(n);
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter building " << i << " name: ";
+        cin >> name;
+        campus.setBuilding(i, name);
+    }
+
+    cout << "Enter number of pathways: ";
+    cin >> e;
+
+    cout << "Enter pathway pairs (indices):\n";
+
+    for (int i = 0; i < e; i++) {
+        cin >> u >> v;
+        campus.addPathway(u, v);
+    }
+
+    cout << "Enter starting building index: ";
+    cin >> start;
+
+    if (start < 0 || start >= campus.size()) {
+        cout << "Invalid starting index!\n";
+        return 0;
+    }
+
+    cout << "\n===== RESULTS BEFORE UPDATE =====\n";
+    campus.displayGraph();
+
+    int bfsBefore = campus.BFS(start);
+    int dfsBefore = campus.DFS(start);
+
+    campus.showDisconnected(start);
+    campus.showIsolated();
+
+    // Requirement A: Add a building
+    cout << "\nAdd a new building? (1=Yes, 0=No): ";
+    int choice;
+    cin >> choice;
+
+    if (choice == 1) {
+        cout << "Enter new building name: ";
+        cin >> name;
+        campus.addBuilding(name);
+    }
+
+    // Requirement A: Add a pathway
+    cout << "Add a new pathway? (1=Yes, 0=No): ";
+    cin >> choice;
+
+    if (choice == 1) {
+        cout << "Enter two building indices: ";
+        cin >> u >> v;
+        campus.addPathway(u, v);
+    }
+
+    cout << "\n===== RESULTS AFTER UPDATE =====\n";
+    campus.displayGraph();
+
+    int bfsAfter = campus.BFS(start);
+    int dfsAfter = campus.DFS(start);
+
+    // Requirement B: Compare results
+    cout << "\n===== COMPARISON =====\n";
+    cout << "BFS before: " << bfsBefore << " buildings\n";
+    cout << "BFS after : " << bfsAfter << " buildings\n";
+    cout << "DFS before: " << dfsBefore << " buildings\n";
+    cout << "DFS after : " << dfsAfter << " buildings\n";
+
+    if (bfsAfter > bfsBefore)
+        cout << "Connectivity improved after update.\n";
+    else
+        cout << "No increase in reachable buildings.\n";
+
+    // Requirement C: Check connectivity
+    campus.showDisconnected(start);
+    campus.showIsolated();
+
+    cout << "\nCheck path between two buildings.\n";
+    cout << "Enter source and destination indices: ";
+    cin >> u >> v;
+
+    if (campus.hasPath(u, v))
+        cout << "A path exists between the buildings.\n";
+    else
+        cout << "No path exists, or invalid building index.\n";
+
+    return 0;
+}
+
