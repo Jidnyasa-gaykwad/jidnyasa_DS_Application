@@ -1,1 +1,1 @@
-
+Develop a C++ program to represent campus buildings and the pathways connecting them using a graph data structure. Each building is represented as a vertex, and each pathway is represented as an edge. Apply Breadth-First Search (BFS) and Depth-First Search (DFS) from a selected starting building to explore campus connectivity. Display the traversal order of both algorithms, count the number of buildings reached, and identify isolated buildings that have no pathways connected to them.
