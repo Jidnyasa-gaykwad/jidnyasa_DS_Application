@@ -1,1 +1,154 @@
 
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <string>
+using namespace std;
+
+class CampusGraph {
+    int V;
+    vector<string> building;
+    vector<int> adj[100];
+
+public:
+    CampusGraph(int n) {
+        V = n;
+        building.resize(n);o
+    }
+
+    void setBuilding(int i, string name) {
+        building[i] = name;
+    }
+
+    void addPathway(int u, int v) {
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+    }
+
+    void BFS(int start) {
+        vector<bool> visited(V, false);
+        queue<int> q;
+        int count = 0;
+
+        visited[start] = true;
+        q.push(start);
+
+        cout << "\nBFS Traversal: ";
+
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
+
+            cout << building[u] << " ";
+            count++;
+
+            for (int i = 0; i < adj[u].size(); i++) {
+                int v = adj[u][i];
+
+                if (!visited[v]) {
+                    visited[v] = true;
+                    q.push(v);
+                }
+            }
+        }
+
+        cout << "\nBuildings reached: " << count
+             << " out of " << V << endl;
+    }
+
+    void DFS_Util(int u, vector<bool>& visited,
+                  int& count) {
+        visited[u] = true;
+        cout << building[u] << " ";
+        count++;
+
+        for (int i = 0; i < adj[u].size(); i++) {
+            int v = adj[u][i];
+
+            if (!visited[v]) {
+                DFS_Util(v, visited, count);
+            }
+        }
+    }
+
+    void DFS(int start) {
+        vector<bool> visited(V, false);
+        int count = 0;
+
+        cout << "\nDFS Traversal: ";
+        DFS_Util(start, visited, count);
+
+        cout << "\nBuildings reached: " << count
+             << " out of " << V << endl;
+    }
+
+    void isolatedBuildings() {
+        bool found = false;
+
+        cout << "\nIsolated Buildings: ";
+
+        for (int i = 0; i < V; i++) {
+            if (adj[i].empty()) {
+                cout << building[i] << " ";
+                found = true;
+            }
+        }
+
+        if (!found)
+            cout << "None";
+
+        cout << endl;
+    }
+};
+
+int main() {
+    int n, e, u, v, start;
+    string name;
+
+    cout << "Enter number of buildings (max 100): ";
+    cin >> n;
+
+    if (n < 1 || n > 100) {
+        cout << "Invalid number of buildings!";
+        return 0;
+    }
+
+    CampusGraph campus(n);
+
+    cout << "Enter building names:\n";
+    for (int i = 0; i < n; i++) {
+        cout << "Building " << i << ": ";
+        cin >> name;
+        campus.setBuilding(i, name);
+    }
+
+    cout << "Enter number of pathways: ";
+    cin >> e;
+
+    cout << "Enter pathway connections using indices:\n";
+    for (int i = 0; i < e; i++) {
+        cin >> u >> v;
+
+        if (u >= 0 && u < n && v >= 0 &&
+            v < n && u != v) {
+            campus.addPathway(u, v);
+        } else {
+            cout << "Invalid pathway. Skipped.\n";
+        }
+    }
+
+    cout << "Enter starting building index: ";
+    cin >> start;
+
+    if (start < 0 || start >= n) {
+        cout << "Invalid starting index!";
+        return 0;
+    }
+
+    campus.BFS(start);
+    campus.DFS(start);
+    campus.isolatedBuildings();
+
+    return 0;
+}
+
